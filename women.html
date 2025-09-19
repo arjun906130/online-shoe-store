@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WOMEN</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/we.css">
+</head>
+<body>
+ <header>
+        <nav>
+            <ul class="nav-list">
+                <li><img src="image/Nike___Designer__Carolyn_Davidson__Firm__n_a_-removebg-preview.png" alt="Nike Logo" id="logo" /></li>
+                <li><h1>NIKE</h1></li>
+                <li><a href="web2.html">HOME</a></li>
+                <li><a href="home.html">NEW & FEATURED</a></li>
+                <li><a href="men.html">MEN</a></li>
+                <li><a href="women.html">WOMEN</a></li>
+                <li><a href="sock.html">SOCKS</a></li>
+                <li id="cart-item"><a href="addcart.html" id="signup">🛒<span id="cart-count">0</span></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+  <section class="men-section">
+         <h1 id="sock">WOMEN'S COLLECTION</h1>
+        <h2>REIMAGED AIR</h2>
+        <p class="section-subtext">Innovation that inspires.expression that Elevates</p>
+
+        <ul class="product-list">
+            <li class="product-card" style="animation-delay: 0.2s;">
+                <img src="image/W+NIKE+PEGASUS+PREMIUM.avif" alt="AIR FORCE 1 LOW RETRO">
+                <p>NIKE PEGASUS PREMIMUM<br>Price: ₹22,000</p>
+                  <div id="di">
+                <button class="buy-btn" onclick="addtocart('NIKE PEGASUS PREMIMUM',22000)">ADDTOCART</button><br><br>
+                <button class="buy-btn1">BUYNOW</button></div>
+            </li>
+
+            <li class="product-card" style="animation-delay: 0.4s;">
+                <img src="image/NIKE+TERRA+MANTA.avif" alt="AIR MAX 90 ESS+">
+                <p>NIKE TERRA MANTA<br>Price: ₹12,000</p>
+                 <div id="di">
+                <button class="buy-btn" onclick="addtocart('NIKE TERRA MANTA',12000)">ADDTOCART</button><br><br>
+                <button class="buy-btn1">BUYNOW</button></div>
+            </li>
+
+            <li class="product-card" style="animation-delay: 0.6s;">
+                <img src="image/W+NIKE+VOMERO+18.avif" alt="AIR MAX 90 PRM">
+                <p>NIKE VOMERO 18<br>Price: ₹10,600</p>
+                  <div id="di">
+                <button class="buy-btn" onclick="addtocart('NIKE VOMERO 18',10600)">ADDTOCART</button><br><br>
+                <button class="buy-btn1">BUYNOW</button></div>
+            </li>
+
+            <li class="product-card" style="animation-delay: 0.8s;">
+                <img src="image/AIR+MAX+DN8.avif" alt="AIR MAX DN8">
+                <p>AIR MAX DN8<br>Price: ₹9,990</p>
+                 <div id="di">
+                <button class="buy-btn" onclick="addtocart('AIR MAX DN8',9990)">ADDTOCART</button><br><br>
+                <button class="buy-btn1">BUYNOW</button></div>
+                
+            </li>
+
+            <li class="product-card" style="animation-delay: 1s;">
+                <img src="image/AIR+MAX+TL+2.5 (1).avif" alt="AIR MAX TL 2.5">
+                <p>AIR MAX TL 2.5<br>Price: ₹3,500</p>
+                  <div id="di">
+                <button class="buy-btn" onclick="addtocart('AIR MAX TL 2.5',3500)">ADDTOCART</button><br><br>
+                <button class="buy-btn1">BUYNOW</button></div>
+            </li>
+        </ul>
+    </section>
+<script src="js/act.js"></script>
+
+    <script src="js/newproduct.js"></script>
+    <script src="js/prod.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+            
+        });
+    
+
+</script>
+</body>
+</html>
+

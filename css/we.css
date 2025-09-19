@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+   padding: 0;
+   margin: 0;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+#cart-item{
+   margin-left: auto; 
+}
+#logo {
+    width: 50px;
+    height: auto;
+}
+#p1{
+    font-size: 28px;
+    color: #111;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.nav-list h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #f5c518; /* Nike yellow accent */
+    color: #111;
+}
+
+/* Special style for Sign In link */
+#signup {
+   position: relative;
+   display: inline-block;
+}
+#cart-count{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: #ccc;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius:50% ;
+    font-weight: bold;
+}
+
+#signup:hover,
+#signup:focus {
+    background-color: #d4a50a;
+}
+
+/* Main section styles */
+
+#ig {
+    position: relative;
+    height: 1000px;
+    display: flex;
+    padding: 0 20px; 
+    overflow: hidden;
+  
+}
+
+#bg-video {
+  margin-top: 50px;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 1; /* Slightly dark for readability */
+}
+
+.about-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 150px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Responsive hero text */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    #ig {
+        height: 600px;
+    }
+}
+
+
+.about-text {
+    max-width: 600px;
+}
+
+p{
+    font-size: 150px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* Footer styles */
+.site-footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.site-footer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f5c518;
+}
+
+.site-footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* Responsive - stack nav items vertically on smaller screens */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #signup {
+        margin-left: 0;
+    }
+}
+

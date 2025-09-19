@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NEW ARRIVALS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/we.css">
+    <!-- Font Awesome for cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/newproduct.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><img src="image/Nike___Designer__Carolyn_Davidson__Firm__n_a_-removebg-preview.png" alt="Nike Logo" id="logo" /></li>
+                <li><h1>NIKE</h1></li>
+                 <li><a href="web2.html">HOME</a></li>
+                <li><a href="home.html">NEW & FEATURED</a></li>
+                <li><a href="men.html">MEN</a></li>
+                <li><a href="women.html">WOMEN</a></li>
+                <li><a href="sock.html">SOCKS</a></li>
+                <li id="cart-item"><a href="addcart.html" id="signup">🛒<span id="cart-count">0</span></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+
+
+    <!-- Products Section -->
+    <section class="men-section">
+        <h1 id="sock">NEW & FEATURED</h1>
+        <h2>The One</h2>
+        <p class="section-subtext">A global showcase to crown the best 1-on-1 player in the world.<br>
+        ALL NEW ARRIVALS.</p>
+
+        
+        <ul class="product-list">
+            <li class="product-card" style="animation-delay: 0.2s;">
+                <img src="image/NIKE+AIR+MAX+PLUS.avif" alt="NIKE AIR MAX PLUS">
+                <p>NIKE AIR MAX PLUS<br>Price: ₹8,899</p>
+                <div id="di">
+                <button class="buy-btn"  onclick="addtocart('NIKE AIR MAX PLUS', 8899)">ADDTOCART</button><br><br>
+                <button class="buy-btn1" >BUYNOW</button></div>
+            </li>
+            <li class="product-card" style="animation-delay: 0.2s;">
+                <img src="image/NIKE+SHOX+TL+PRINT.avif" alt="NIKE SHOX TL PRINT">
+                <p>NIKE SHOX TL PRINT<br>Price: ₹11,900</p>
+                <div id="di">
+                <button class="buy-btn"  onclick="addtocart('NIKE SHOX TL PRINT', 11900)">ADDTOCART</button><br><br>
+                <button class="buy-btn1" >BUYNOW</button></div>
+            </li>
+            <li class="product-card" style="animation-delay: 0.2s;">
+                <img src="image/NIKE+DUNK+LOW+RETRO+PRM.avif" alt="NIKE DUNK LOW RETRO">
+                <p>NIKE DUNK LOW RETRO<br>Price: ₹14,000</p>
+                 <div id="di">
+                <button class="buy-btn"  onclick="addtocart('NIKE DUNK LOW RETRO', 14000)">ADDTOCART</button><br><br>
+                <button class="buy-btn1" >BUYNOW</button></div>
+            </li>
+        </ul>
+    </section>
+   <script src="js/act.js"></script>
+     <script src="js/newproduct.js"></script>
+    <script src="js/prod.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
+    
+
+</script>
+</body>
+</html>
