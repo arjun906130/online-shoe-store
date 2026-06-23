@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Nike's newest arrivals. Fresh drops and featured collections with the latest in athletic footwear.">
+    <title>New & Featured — NIKE Store</title>
+    <link rel="stylesheet" href="css/we.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <ul class="nav-list" id="nav-links">
+                <li><img src="image/Nike___Designer__Carolyn_Davidson__Firm__n_a_-removebg-preview.png" alt="Nike Logo" id="logo" /></li>
+                <li><h1>NIKE</h1></li>
+                <li><a href="web2.html">Home</a></li>
+                <li><a href="home.html">New & Featured</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="sock.html">Socks</a></li>
+                <li id="cart-item"><a href="addcart.html" id="signup">🛒<span id="cart-count">0</span></a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="men-section">
+        <h1 id="sock">NEW & FEATURED</h1>
+        <h2>The One</h2>
+        <p class="section-subtext">A global showcase to crown the best 1-on-1 player in the world.<br>
+        All new arrivals — freshly dropped.</p>
+
+        <ul class="product-list">
+            <li class="product-card">
+                <img src="image/NIKE+AIR+MAX+PLUS.avif" alt="NIKE AIR MAX PLUS">
+                <p>NIKE AIR MAX PLUS<br><span class="price-tag">₹8,899</span></p>
+                <div id="di">
+                    <button class="buy-btn" onclick="addtocart('NIKE AIR MAX PLUS', 8899)">Add to Cart</button>
+                    <button class="buy-btn1">Buy Now</button>
+                </div>
+            </li>
+            <li class="product-card">
+                <img src="image/NIKE+SHOX+TL+PRINT.avif" alt="NIKE SHOX TL PRINT">
+                <p>NIKE SHOX TL PRINT<br><span class="price-tag">₹11,900</span></p>
+                <div id="di">
+                    <button class="buy-btn" onclick="addtocart('NIKE SHOX TL PRINT', 11900)">Add to Cart</button>
+                    <button class="buy-btn1">Buy Now</button>
+                </div>
+            </li>
+            <li class="product-card">
+                <img src="image/NIKE+DUNK+LOW+RETRO+PRM.avif" alt="NIKE DUNK LOW RETRO">
+                <p>NIKE DUNK LOW RETRO<br><span class="price-tag">₹14,000</span></p>
+                <div id="di">
+                    <button class="buy-btn" onclick="addtocart('NIKE DUNK LOW RETRO', 14000)">Add to Cart</button>
+                    <button class="buy-btn1">Buy Now</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/act.js"></script>
+    <script src="js/newproduct.js"></script>
+    <script src="js/prod.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+            // Navbar scroll effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+            // Mobile menu toggle
+            const toggle = document.getElementById('mobile-toggle');
+            const navLinks = document.getElementById('nav-links');
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('open');
+                    const icon = toggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

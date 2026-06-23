@@ -1,0 +1,212 @@
+/* ═══════════════════════════════════════════
+   CART PAGE STYLING
+   ═══════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.cart {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    max-width: 900px;
+    margin: 110px auto 60px;
+    border-radius: 20px;
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.cart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f5c518, #ff6b35);
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, #f5c518, #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 28px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+thead {
+    background: linear-gradient(135deg, rgba(245, 197, 24, 0.15), rgba(255, 107, 53, 0.15));
+}
+
+th {
+    padding: 16px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f5c518;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+    color: #b0b0b0;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.qty-input {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 64px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qty-input:focus {
+    border-color: #f5c518;
+    box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.15);
+}
+
+.remove-btn {
+    background: rgba(255, 59, 48, 0.12);
+    color: #ff3b30;
+    border: 1px solid rgba(255, 59, 48, 0.2);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.remove-btn:hover {
+    background: rgba(255, 59, 48, 0.25);
+    border-color: #ff3b30;
+    transform: translateY(-1px);
+}
+
+.clear-btn {
+    background: transparent;
+    color: #ff3b30;
+    border: 2px solid rgba(255, 59, 48, 0.3);
+    padding: 14px 32px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.clear-btn:hover {
+    background: rgba(255, 59, 48, 0.12);
+    border-color: #ff3b30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255, 59, 48, 0.2);
+}
+
+.clear-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#p1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 24px 0;
+}
+
+#p1 #cart-total {
+    background: linear-gradient(135deg, #f5c518, #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+/* Empty cart message */
+td[colspan="5"] {
+    text-align: center;
+    padding: 48px 20px;
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .cart {
+        margin: 90px 12px 40px;
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .qty-input {
+        width: 50px;
+    }
+}
