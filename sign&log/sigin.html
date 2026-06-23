@@ -1,19 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us — NIKE Member</title>
     <link rel="stylesheet" href="sign.css">
 </head>
 <body>
+    <div class="nike-bg-logo">NIKE</div>
     <div id="div1">
-        <h1>Sign Up</h1>
+        <h1>SIGN UP</h1>
         <form name="fm" onsubmit="return reg()">
-            <label for="email">EMAIL</label>
-            <input id="email" name="email" type="text" placeholder="Enter your Email">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="email@example.com" required>
 
-            <label for="pass">PASSWORD</label>
-            <input id="pass" name="password" type="password" placeholder="Enter your password">
+            <label for="pass">Create Password</label>
+            <input id="pass" name="password" type="password" placeholder="••••••••" required>
 
-            <button type="submit">SUBMIT</button><br>
-            <a href="login34.html" id="nxt">LOGIN</a>
+            <button type="submit">Create Account</button>
+            <a href="login34.html" id="nxt">Already a member? Login</a>
         </form>
     </div>
 
@@ -23,28 +28,26 @@
             let password = document.fm.password.value;
 
             if (email === "") {
-                alert("Email is empty");
+                alert("Email is required");
                 return false;
             }
-            if (!email.includes("@")) 
-            {
-                alert("Email must contain '@'");
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address");
                 return false;
             }
-
             if (password === "") {
-                alert("Password is empty");
+                alert("Password is required");
                 return false;
             }
-             
-            if (!password.includes("6")) 
-            {
-                alert("Password must contain the number 6");
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
                 return false;
             }
-
             
-            return true; 
+            // Success - Redirect or show success
+            alert("Account created successfully!");
+            window.location.href = "login34.html";
+            return false; // Prevent form sub
         }
     </script>
 </body>
