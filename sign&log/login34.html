@@ -1,26 +1,33 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="log34.css">
-    </head>
-    <body>
-      
-        <div id="div1">
-             <h1>Sign Up</h1>
-            <form >
-               
-                <label for="name">NAME</label>
-                <input id="name" type="text" placeholder="Enter your name" >
-                <label for="email">EMAIL</label>
-                <input id="name" type="email" placeholder="Enter your email" >
-                <label for="name">PASSWORD</label>
-                <input id="name" type="password" placeholder="New your password" >
-                <label for="name">RE-PASSWORD</label>
-                <input id="name" type="password" placeholder="Re-enter password" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login — NIKE Store</title>
+    <link rel="stylesheet" href="log34.css">
+</head>
+<body>
+    <div id="div1">
+        <h1>LOGIN</h1>
+        <form onsubmit="return handleLogin(event)">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="email@example.com" required>
+            
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="••••••••" required>
 
-    
-                <button type="submit">SUBMIT</button>
-                
-            </form>
-        </div>
-    </body>
+            <button type="submit">Unlock Access</button>
+            <a href="sigin.html" id="nxt">New here? Sign up for free</a>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            alert("Login successful! Welcome back.");
+            window.location.href = "../web2.html";
+            return false;
+        }
+    </script>
+</body>
 </html>
